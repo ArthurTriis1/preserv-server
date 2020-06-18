@@ -1,5 +1,6 @@
 //const transporter = require('../config/mail')
 const sgMail = require('../config/mail')
+require('dotenv/config')
 
 class MailController {
     async sendMail(req, res){
@@ -23,7 +24,7 @@ class MailController {
               const mailsent = await sgMail.send(msg);
               return res.json({message: mailsent})
           }catch(err){
-            return res.status(400).json({message: err})
+            return res.status(400).json({key: process.env.KEY, message: err})
           }
 
     }
