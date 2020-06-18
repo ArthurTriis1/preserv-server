@@ -17,6 +17,7 @@
     "express": "^4.17.1",
     "netlify-lambda": "^1.6.3",
     "nodemailer": "^6.4.10",
+    "nodemailer-smtp-transport": "^2.7.4",
     "serverless-http": "^2.5.0"
   }
 }
